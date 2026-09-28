@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/frags :: head('Enter Your Birthday')}"></head>
+<body>
+<div class="content">
+    <div class="content-inside">
+        <div th:insert="~{fragments/frags :: header}"></div>
+
+        <div th:replace="~{fragments/frags :: background}"></div>
+
+        <form method="post"
+              th:action="@{/get-horoscope}"
+              th:object="${birthday}">
+            <!-- Day -->
+            <label for="day">
+                Day
+            </label>
+            <br/>
+            <select th:field="*{day}" id="day">
+                <option th:each="i : ${#numbers.sequence(1,31)}"
+                        th:value="${i}"
+                        th:text="${i}">
+                </option>
+            </select>
+
+            <br/>
+
+            <!-- Month -->
+            <label for="month">
+                Month
+            </label>
+            <br/>
+            <select th:field="*{month}" id="month">
+                <option th:each="m : ${monthList}"
+                        th:value="${mStat.count}"
+                        th:text="${m.name}">
+                </option>
+            </select>
+
+            <br/>
+
+            <!-- Year -->
+            <label for="year">
+                Year
+            </label>
+            <br/>
+            <input type="number" min="1900" max="2100"
+                   id="year" th:field="*{year}">
+
+            <br/>
+
+            <!-- Zodiac types -->
+            <input type="radio" id="z-eastern"
+                   value="Eastern" th:field="*{zodiacType}">
+            <label for="z-eastern">
+                Eastern Zodiac
+            </label>
+            <br/>
+            <input type="radio" id="z-western"
+                   value="Western" th:field="*{zodiacType}">
+            <label for="z-western">
+                Western Zodiac
+            </label>
+
+            <br/>
+
+            <!-- Terms -->
+            <input type="checkbox" id="terms" th:field="*{termsAccepted}">
+            <label for="terms">
+                I agree to the terms of use.
+            </label>
+
+            <br/>
+            <br/>
+            <input type="submit" value="Reveal Your Future">
+
+        </form>
+    </div>
+</div>
+<div th:replace="~{fragments/frags :: disclaimer}"></div>
+</body>
+</html>

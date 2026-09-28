@@ -1,0 +1,22 @@
+<head th:fragment="head(pageTitle)">
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}"></title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Megrim&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}"></script>
+</head>
+
+<div class="fullscreen-bg" th:fragment="background">
+    <video loop muted autoplay class="fullscreen-bg__video">
+        <source th:src="@{/video/1015612432-sd.mov}" type="video/mp4">
+    </video>
+</div>
+
+<header th:fragment="header">
+    <h1><a th:href="@{/}">Welcome to the Mystic Oracle</a></h1>
+    <h2><a th:href="@{/enter-birthday}">Reveal Your Horoscope</a></h2>
+</header>
+
+<footer th:fragment="disclaimer">
+    For entertainment purposes only. Not an endorsement of any particular metaphysical reality.
+</footer>

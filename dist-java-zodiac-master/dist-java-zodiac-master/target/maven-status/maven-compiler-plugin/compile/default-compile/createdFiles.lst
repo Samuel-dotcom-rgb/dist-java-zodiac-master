@@ -1,0 +1,14 @@
+edu\wctc\distjavazodiac\service\BasicMonthListService.class
+edu\wctc\distjavazodiac\service\ZodiacService.class
+edu\wctc\distjavazodiac\entity\Month.class
+edu\wctc\distjavazodiac\service\HoroscopeService.class
+edu\wctc\distjavazodiac\entity\Birthday.class
+edu\wctc\distjavazodiac\entity\Fortune.class
+edu\wctc\distjavazodiac\service\SimpleZodiacService.class
+edu\wctc\distjavazodiac\repository\FortuneRepository.class
+edu\wctc\distjavazodiac\DistJavaZodiacApplication.class
+edu\wctc\distjavazodiac\repository\MonthRepository.class
+edu\wctc\distjavazodiac\HoroscopeController.class
+edu\wctc\distjavazodiac\entity\Horoscope.class
+edu\wctc\distjavazodiac\service\RandomHoroscopeService.class
+edu\wctc\distjavazodiac\service\MonthListService.class

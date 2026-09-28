@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/frags :: head('Mystic Oracle Horoscopes')}"></head>
+<body>
+<div class="content">
+    <div class="content-inside">
+
+        <div th:insert="~{fragments/frags :: header}"></div>
+
+        <div th:replace="~{fragments/frags :: background}"></div>
+
+    </div>
+</div>
+<div th:replace="~{fragments/frags :: disclaimer}"></div>
+</body>
+</html>
